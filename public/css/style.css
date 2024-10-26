@@ -1,0 +1,425 @@
+@charset "UTF-8";
+nav .üst-nav .options .dil {
+  font-size: 12px;
+  border: none;
+}
+nav .üst-nav .options .para {
+  font-size: 12px;
+  border: none;
+}
+nav .üst-nav .list-group-flush {
+  font-size: 12px;
+}
+nav .üst-nav .list-group-flush a {
+  text-decoration: none;
+  padding: 6px;
+  color: gray;
+}
+nav .üst-nav .list-group-flush .ciz:hover {
+  text-decoration: underline;
+}
+nav .alt-nav .logo {
+  width: 150px;
+  height: 40px;
+}
+nav .alt-nav .logo img {
+  width: 100%;
+  height: 100%;
+}
+nav .alt-nav .search {
+  width: 60%;
+  height: 48px;
+}
+nav .alt-nav .search input {
+  width: 100%;
+  height: 100%;
+  background-color: #F2F3F7;
+  outline: none !important;
+}
+nav .alt-nav .search button {
+  width: 62px;
+  height: 48px;
+  right: 0;
+  border: 2px solid #F2F3F7;
+  background-color: #F65A5A;
+}
+nav .alt-nav .search .search-inp::-moz-placeholder {
+  margin-left: 10px !important;
+  padding: 10px;
+}
+nav .alt-nav .search .search-inp::placeholder {
+  margin-left: 10px !important;
+  padding: 10px;
+}
+nav .alt-nav .sag a {
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  font-weight: 500;
+}
+nav .alt-nav .sag a i {
+  font-size: 20px;
+}
+nav .alt-nav .badge {
+  font-size: 8px;
+  right: 10px;
+}
+nav .alt-nav .navbar .bottom-item {
+  text-decoration: none;
+  color: gray;
+}
+nav .alt-nav .navbar .nav-item-bottom:hover a {
+  text-decoration: underline;
+}
+nav .alt-nav .navbar li:hover {
+  cursor: pointer;
+}
+nav .alt-nav .navbar li:hover .nav-link {
+  color: #F65A5A;
+}
+
+.category-open ul li {
+  cursor: pointer;
+}
+.category-open ul li i {
+  font-size: 20px;
+}
+
+.category-open ul li a:hover {
+  color: #F65A5A;
+}
+
+.category-open ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 13px;
+  margin-left: 7px;
+}
+
+.jg-logo {
+  width: 20px;
+  height: 20px;
+}
+.jg-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.search-2 {
+  width: 100%;
+  height: 48px;
+}
+.search-2 .search-inp-2 {
+  width: 100%;
+  height: 100%;
+  background-color: #F2F3F7;
+  outline: none !important;
+}
+.search-2 .search-inp-2::-moz-placeholder {
+  margin-left: 10px !important;
+  padding: 10px;
+}
+.search-2 .search-inp-2::placeholder {
+  margin-left: 10px !important;
+  padding: 10px;
+}
+
+main .category {
+  font-size: 14px;
+}
+main .category div:hover {
+  color: #F65A5A;
+  cursor: pointer;
+}
+main .promosyon:hover {
+  cursor: pointer;
+}
+main .promosyon:hover .promosyon-arrow {
+  color: white;
+}
+
+.tekno-bg {
+  background-color: #EAEDF8;
+  cursor: pointer;
+}
+
+.tekno-bg:hover img {
+  transform: scale(105%);
+  transition: 0.5s;
+}
+
+.outlet-bg {
+  background-color: #f9d3d9;
+  cursor: pointer;
+}
+
+.outlet-bg:hover img {
+  transform: scale(105%);
+  transition: 0.5s;
+}
+
+.promosyon-title {
+  font-size: 20px;
+}
+
+.promosyon-info {
+  font-size: 14px;
+}
+
+.content .cards {
+  overflow: hidden;
+}
+.content .cards .card {
+  border: none;
+  cursor: pointer;
+}
+.content .cards .like {
+  z-index: 1;
+}
+.content .cards img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.content .cards span {
+  font-size: 12px;
+  color: white;
+  background-color: #F65A5A;
+  border-radius: 10px;
+}
+.content .cards .cevir {
+  font-size: 14px;
+  color: #F65A5A;
+  transform: rotate(-35deg);
+}
+.content .cards i {
+  color: #F65A5A;
+}
+.content .cards p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+}
+.content .cards .card-alt {
+  font-size: 10px;
+}
+.content .cards .bg-ver {
+  background-color: #F2F3F7;
+  border-radius: 5px;
+}
+.content .card img:hover {
+  transform: scale(105%);
+  transition: 0.5s;
+}
+
+.content-2 .carts .cart {
+  width: 500px;
+  height: 255px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.content-2 .carts .cart .carousel-info {
+  font-size: 14px;
+}
+.content-2 .carts .cart img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.content-2 .carts i {
+  border-radius: 50%;
+}
+.content-2 .carts .cart:hover img {
+  transform: scale(105%);
+  transition: 0.5s;
+}
+.content-2 .carousel-title {
+  font-size: 20px;
+}
+
+.content .sol {
+  width: 50%;
+  cursor: pointer;
+}
+.content .sol img {
+  width: 100%;
+  height: 100%;
+}
+.content .sol:hover img {
+  transform: scale(105%);
+  transition: 0.5s;
+}
+.content .sag {
+  width: 50%;
+}
+.content .sag .card img {
+  width: 100%;
+}
+
+.cizgi {
+  border-bottom: 1px solid lightgray;
+}
+
+footer span {
+  font-weight: 500;
+}
+footer .list-item {
+  cursor: pointer;
+  font-size: 14px;
+  color: gray;
+}
+footer .list-item:hover {
+  text-decoration: underline;
+}
+footer .payment-all {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+footer .payment {
+  font-size: 12px;
+  color: black;
+}
+footer .app-store {
+  width: 150px;
+}
+footer .lh-lg {
+  margin: 0px 5px;
+}
+
+.footer-dip {
+  color: lightgray;
+  font-size: 14px;
+}
+
+.footer-dip-end div, .footer-dip-end span {
+  font-size: 12px;
+  color: gray;
+}
+.footer-dip-end div {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 1030px) {
+  .card-üst {
+    font-size: 10px;
+  }
+  .card-üst i {
+    font-size: 10px;
+  }
+  .card-alt {
+    font-size: 11px !important;
+  }
+  .card-alt i {
+    font-size: 11px;
+  }
+}
+@media (max-width: 930px) {
+  .oto-moto {
+    display: none;
+  }
+  .card-üst {
+    font-size: 10px;
+  }
+  .card-üst i {
+    font-size: 10px;
+  }
+  .card-alt {
+    font-size: 10px !important;
+  }
+  .card-alt i {
+    font-size: 10px;
+  }
+}
+@media (max-width: 866px) {
+  .shoes {
+    display: none;
+  }
+}
+@media (max-width: 794px) {
+  .men {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .promosyon-text {
+    font-size: 12px;
+  }
+  .geceden {
+    font-size: 12px;
+  }
+  nav .alt-nav .sag a i {
+    font-size: 14px;
+  }
+  .promosyon-title {
+    font-size: 14px;
+  }
+  .promosyon-info {
+    font-size: 10px;
+  }
+  .content .sag {
+    width: 40%;
+  }
+  .sol {
+    width: 60%;
+  }
+  .sol .çanta {
+    width: 100%;
+  }
+  .sol .çanta img {
+    width: 150px;
+    height: 150px;
+  }
+  footer {
+    font-size: 12px;
+  }
+  .payment-all {
+    padding: 0px;
+  }
+  .social {
+    width: 120px;
+  }
+  .app-store {
+    width: 120px;
+  }
+}
+@media (max-width: 576px) {
+  .content {
+    justify-content: space-between;
+  }
+  .content .sol {
+    width: 100%;
+  }
+  .content .sag {
+    width: 100% !important;
+  }
+  .promosyon-title {
+    font-size: 12px;
+  }
+  .promosyon-info {
+    font-size: 10px;
+  }
+  .carousel-title {
+    font-size: 14px !important;
+  }
+  .carousel-title .carousel-info {
+    font-size: 12px !important;
+  }
+  .carousel-title .basket-btn {
+    font-size: 14px !important;
+  }
+  footer .list-item {
+    font-size: 12px;
+  }
+  .payment {
+    font-size: 12px;
+  }
+}
+@media (max-width: 360px) {
+  .alt-nav {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */

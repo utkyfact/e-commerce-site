@@ -1,0 +1,54 @@
+.arka-plan{
+    background-color: #f2f2f2;
+}
+.ana a{
+    font-size: 12px;
+    text-decoration: underline;
+    color: gray;
+}
+.anasayfa:hover{
+    color: red !important;
+}
+.ana a:hover{
+    color: red;
+}
+.empty-basket{
+    width: 350px; 
+}
+.empty-basket img{
+    width: 100%;
+}
+.sepet-logo{
+    width: 100px;
+}
+.sepet-logo img{
+    width: 100%;
+    border-radius: 10px;
+}
+.hide-p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+.basket{
+    overflow-y: auto;
+}
+.div-items{
+    width: 30px;
+    height: 30px;
+}
+.div-items img{
+    width: 100%;
+}
+.div-notice{
+    font-size: 12px;
+    color: gray;
+}
+
+.payment{
+    font-size: 12px;
+}
+
+#discount:hover {
+    background-color: rgb(245, 239, 239);
+}

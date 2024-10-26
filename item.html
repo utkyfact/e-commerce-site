@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joom Ürün Detay</title>
+    <link rel="shortcut icon" href="./icons/Joomgeek.jfif" type="image/x-icon">
+    <!-- css -->
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/item.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./public/css/bootstrap.css">
+</head>
+
+<body>
+    <!-- NAVBAR AÇILIŞ -->
+<nav class="container-fluid d-flex flex-column px-lg-3 px-md-3">
+    <!-- NAVBAR EN ÜST KISIM -->
+    <div class="üst-nav d-lg-flex d-none align-items-center justify-content-between">
+        <div class="options">
+            <select class="dil">
+                <option>Türkçe</option>
+                <option>English</option>
+            </select>
+            <select class="para">
+                <option>TRY</option>
+                <option>USD</option>
+            </select>
+        </div>
+        <div class="d-flex list-group-flush me-5 gap-4">
+            <a class="ciz" href="#">Destek</a>
+            <a class="ciz" href="#">Teslimat</a>
+            <a class="ciz" href="#">Garanti</a>
+            <a class="j-g fw-bold rounded-bottom-4 px-4 bg-black text-white" href="#">Page Geek</a>
+        </div>
+    </div>
+
+    <div class="alt-nav d-flex justify-content-between align-items-center gap-3 mt-md-4 mt-0">
+        <div class="d-flex align-items-center fold">
+            <!-- NAVBAR TELEFON-EKRAN BOYU İÇİN -->
+            <div class="navbar d-md-none d-block">
+                <div>
+                    <button class="navbar-toggler border border-0 p-0 me-2" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Page Geek</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+
+                        </div>
+                        <div class="cizgi"></div>
+
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <a class="nav-link text-danger" aria-current="page" href="#"><i
+                                            class="fa-solid fa-certificate"></i>
+                                        Çarkı döndürün!</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <a class="nav-link text-danger" href="#"><i class="fa-solid fa-ticket"></i>
+                                        Kullanıcılardan gelen değerlendirmeler</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-person-dress"></i>
+                                    <a class="nav-link" href="#">
+                                        Kadın Modası</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-person"></i>
+                                    <a class="nav-link" aria-current="page" href="#">
+                                        Erkek Modası</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-shoe-prints"></i>
+                                    <a class="nav-link" href="#">
+                                        Ayakkabı</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-headphones"></i>
+                                    <a class="nav-link" aria-current="page" href="#">
+                                        Elektronik</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-mobile"></i>
+                                    <a class="nav-link" href="#">
+                                        Akıllı Telefon Kılıfları</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-tv"></i>
+                                    <a class="nav-link" aria-current="page" href="#">
+                                        Ev Aletleri</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-house"></i>
+                                    <a class="nav-link" href="#">
+                                        Ev Eşyaları</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-venus"></i>
+                                    <a class="nav-link" aria-current="page" href="#">
+                                        Sağlık ve Güzellik</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-heart-pulse"></i>
+                                    <a class="nav-link" href="#">
+                                        Sağlık</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-baby-carriage"></i>
+                                    <a class="nav-link" aria-current="page" href="#">
+                                        Bebek Ürünleri</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <a class="nav-link" href="#">
+                                        Saatler</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-bicycle"></i>
+                                    <a class="nav-link" aria-current="page" href="#">
+                                        Spor ve Eğlence</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-suitcase-rolling"></i>
+                                    <a class="nav-link" href="#">
+                                        Çantalar ve Bavullar</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-hammer"></i>
+                                    <a class="nav-link" aria-current="page" href="#">
+                                        İnşaat ve Tadilat</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-car"></i>
+                                    <a class="nav-link" href="#">
+                                        Otomobiller ve Motorsikletler</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-palette"></i>
+                                    <a class="nav-link" aria-current="page" href="#">
+                                        Hobi ve Yaratıcılık</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-paw"></i>
+                                    <a class="nav-link" href="#">
+                                        Evcil Hayvan Ürünleri</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-certificate"></i>
+                                    <a class="nav-link" aria-current="page" href="#">
+                                        Xiaomi</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-regular fa-gem"></i>
+                                    <a class="nav-link" href="#">
+                                        Takı ve Bijuteri</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-pen"></i>
+                                    <a class="nav-link" aria-current="page" href="#">
+                                        Ofis ve Okul Araçları</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-gift"></i>
+                                    <a class="nav-link" href="#">
+                                        Kutlamalar</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-house"></i>
+                                    <a class="nav-link" aria-current="page" href="#">
+                                        Yazlık ve Bahçe</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-compact-disc"></i>
+                                    <a class="nav-link" href="#">
+                                        K-Pop</a>
+                                </li>
+                            </ul>
+
+                            <div class="cizgi"></div>
+
+                            <ul class="d-flex flex-column gap-2 mt-2 list-unstyled">
+                                <li class="nav-item-bottom">
+                                    <a class="bottom-item" aria-current="page" href="#">
+                                        Destek</a>
+                                </li>
+                                <li class="nav-item-bottom">
+                                    <a class="bottom-item" href="#">
+                                        Teslimat</a>
+                                </li>
+                                <li class="nav-item-bottom">
+                                    <a class="bottom-item" aria-current="page" href="#">
+                                        Garanti</a>
+                                </li>
+                                <li class="nav-item-bottom">
+                                    <a class="bottom-item" href="#">
+                                        Erişebilirlik Ayarları</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logo w-100">
+                <span>LOGO ADDED</span>
+            </div>
+        </div>
+        <!-- LG EKRAN BOYU SEARCH -->
+        <div class="search d-lg-flex d-none position-relative">
+            <input class="search-inp border border-0 rounded-4 p-3" type="text" placeholder="Arama">
+            <button class="rounded-4 d-lg-block d-none position-absolute text-white">Bul</button>
+        </div>
+
+        <div class="d-flex">
+            <div class="d-flex gap-1 me-md-0 me-2 sag">
+                <div class="d-flex">
+                    <button class="d-flex btn border border-0 flex-column align-items-center gap-1"><i
+                            class="fa-regular fa-bell sag-icon"></i><span
+                            class="d-lg-block d-none">Bildirimler</span></button>
+                </div>
+                <div>
+                    <button type="button" class="d-flex btn border border-0 flex-column align-items-center gap-1"
+                        data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
+                            class="fa-regular fa-user sag-icon"></i><span
+                            class="d-lg-block d-none">Giriş/Kayıt</span></button>
+                </div>
+                <!-- MODAL YAPISI LOGIN REGISTER -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title fs-5" id="staticBackdropLabel">Giriş/Kayıt</h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body modals">
+                                <form class="form-login bg-white">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Giriş yap</h1>
+                                    <div class="mb-3 my-2">
+                                        <label for="username-log" class="form-label">Id<span class="uyari"></span>
+                                        </label>
+                                        <input type="text" class="form-control" id="username-log">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="pass-log" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="pass-log">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="mail-log" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="mail-log"
+                                            aria-describedby="emailHelp" placeholder="example@">
+                                    </div>
+                                    <button id="btn-log" class="btn btn-outline-primary mb-2 w-100" type="button">Giriş
+                                        yap</button>
+                                </form>
+
+                                <form class="form-register bg-white d-none">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Kayıt ol</h1>
+                                    <div class="mb-3 my-2">
+                                        <label for="username-reg" class="form-label">Kullanıcı adı girin<span
+                                                class="uyari"></span> </label>
+                                        <input type="text" class="form-control" id="username-reg">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="pass-reg" class="form-label">Bir şifre girin</label>
+                                        <input type="password" class="form-control" id="pass-reg">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="mail-reg" class="form-label">Email adresinizi girin</label>
+                                        <input type="email" class="form-control" id="mail-reg"
+                                            aria-describedby="emailHelp" placeholder="example@">
+                                    </div>
+                                    <button id="btn-reg" class="btn btn-outline-primary mb-2 w-100" type="button">Kayıt
+                                        ol</button>
+                                </form>
+                            </div>
+                            <div class="modal-footer d-flex justify-content-between">
+                                <div class="wrapper-modal">
+
+                                </div>
+                                <button type="button" class="btn btn-primary btn-change">Değiştir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <button class="d-flex btn border border-0 flex-column align-items-center gap-1"><i
+                            class="fa-solid fa-box-archive sag-icon"></i><span
+                            class="d-lg-block d-none">Siparişlerim</span></button>
+                </div>
+                <div class="position-relative">
+                    <button onclick="gönder()"
+                        class="d-flex btn border border-0 flex-column align-items-center gap-1"><i
+                            class="fa-solid fa-cart-shopping sag-icon"></i><span
+                            class="d-lg-block d-none">Sepet</span></button>
+                    <span class="badge position-absolute top-0 text-thite bg-danger">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-2 d-lg-none d-block active">
+        <input class="search-inp-2 border border-0 rounded-4 w-100 p-3" type="text" placeholder="Arama">
+    </div>
+</nav>
+
+    <main class="container-fluid d-flex flex-column">
+        <div class="category d-lg-flex d-md-flex d-none py-1 mt-4 gap-xl-5 gap-lg-4 gap-3 align-items-center">
+            <div class="kategoriler fw-bold dropdpwn">
+                <i class="fa-solid fa-bars text-danger fw-bold"></i>
+                <button id="btn-category" class="border border-0 text-danger bg-transparent fw-bold" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Tüm Kategoriler
+                </button>
+            </div>
+            <div class="text-danger fw-bold">
+                <i class="fa-solid fa-certificate"></i>
+                Çarkı döndürün!
+            </div>
+            <div class="text-danger fw-bold">
+                <i class="fa-solid fa-ticket"></i>
+                Kullanıcılardan gelen değerlendirmeler
+            </div>
+            <div>
+                Kadın modası
+            </div>
+            <div class="men">
+                Erkek modası
+            </div>
+            <div class="shoes">
+                Ayakkabı
+            </div>
+            <div class="d-lg-block d-none">
+                Elektronik
+            </div>
+        </div>
+        <div class="category d-lg-flex d-md-flex d-none py-1 mb-4 gap-xl-5 gap-lg-4 gap-3">
+            <div>
+                Akıllı Telefon Kılıfları
+            </div>
+            <div>
+                Ev Aletleri
+            </div>
+            <div>
+                Ev eşyaları
+            </div>
+            <div>
+                Sağlık ve güzellik
+            </div>
+            <div>
+                Sağlık
+            </div>
+            <div>
+                Bebek ürünleri
+            </div>
+            <div>
+                Çantalar ve bavullar
+            </div>
+            <div class="oto-moto">
+                Otomobiller ve Motosikletler
+            </div>
+        </div>
+        <div class="category-open d-flex align-items-center justify-content-between px-4 d-none">
+            <ul class="d-flex flex-column gap-2 list-unstyled text-decoration-none">
+                <li><i class="fa-solid fa-person-dress"></i><a class="category-item"></i>Kadın Modası</a></li>
+                <li><i class="fa-solid fa-person"></i><a class="category-item">Erkek Modası</a></li>
+                <li><i class="fa-solid fa-shoe-prints"></i><a class="category-item"></i>Ayakkabı</a></li>
+                <li><i class="fa-solid fa-headphones"></i><a class="category-item">Elektronik</a></li>
+                <li><i class="fa-solid fa-mobile"></i><a class="category-item">Akıllı Telefon Kılıfları</a></li>
+                <li><i class="fa-solid fa-tv"></i><a class="category-item">Ev Aletleri</a></li>
+            </ul>
+            <ul class="d-flex flex-column gap-2 list-unstyled text-decoration-none">
+                <li><i class="fa-solid fa-house"></i><a class="category-item"></i>Ev eşyaları</a></li>
+                <li><i class="fa-solid fa-venus"></i><a class="category-item">Sağlık ve güzellik</a></li>
+                <li><i class="fa-solid fa-heart-pulse"></i><a class="category-item"></i>Sağlık</a></li>
+                <li><i class="fa-solid fa-baby-carriage"></i><a class="category-item">Bebek ürünleri</a></li>
+                <li><i class="fa-solid fa-suitcase-rolling"></i><a class="category-item">Çantalar ve bavullar</a></li>
+                <li><i class="fa-solid fa-car"></i><a class="category-item">Otomobiller ve Motosikletler</a></li>
+            </ul>
+            <ul class="d-flex flex-column gap-2 list-unstyled text-decoration-none">
+                <li><i class="fa-solid fa-clock"></i><a class="category-item"></i>Saatler</a></li>
+                <li><i class="fa-solid fa-hammer"></i><a class="category-item">İnşaat ve Tadilat</a></li>
+                <li><i class="fa-solid fa-shoe-prints"></i><a class="category-item"></i>Ayakkabı</a></li>
+                <li><i class="fa-solid fa-bicycle"></i><a class="category-item">Spor ve Eğlence</a></li>
+                <li><i class="fa-solid fa-gem"></i><a class="category-item">Takı ve Bijuteri</a></li>
+                <li><i class="fa-solid fa-palette"></i><a class="category-item">Hobi ve Yaratıcılık</a></li>
+            </ul>
+            <ul class="d-flex flex-column gap-2 list-unstyled text-decoration-none">
+                <li><i class="fa-solid fa-paw"></i><a class="category-item"></i>Hayvan</a></li>
+                <li><i class="fa-solid fa-certificate"></i><a class="category-item">Xiaomi</a></li>
+                <li><i class="fa-solid fa-pen"></i><a class="category-item"></i>Ofis ve Okul Araçları</a></li>
+                <li><i class="fa-solid fa-gift"></i><a class="category-item">Kutlamalar</a></li>
+                <li><i class="fa-solid fa-house"></i><a class="category-item">Yazlık Bahçe</a></li>
+                <li><i class="fa-solid fa-compact-disc"></i><a class="category-item">K-Pop</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <section class="container-fluid">
+
+        <div class="div-info py-4">
+            <a href="./index.html">Ana sayfa</a> <span>/</span>
+            <a href="#">Katalog</a> <span>/</span>
+            <a href="#">Elektronik</a> <span>/</span>
+            <a href="#">Kulaklıklar ve ses ekipmanları</a> <span>/</span>
+            <a href="#">Kulaklık</a> <span>/</span>
+            <a href="#">Kablosuz Kulaklık</a>
+        </div>
+
+        <div class="d-flex flex-lg-row flex-md-row flex-column justify-content-between">
+            <div class="d-flex flex-column position-relative">
+                <div class="img-kapsayici d-flex">
+                    <div class="sm-img d-lg-flex d-md-flex d-none flex-column gap-3 me-2">
+                        <div class="scroll-top"></div>
+                        <div>
+                            <img src="./detay/üründetay1.jpeg">
+                        </div>
+                        <div>
+                            <img src="./detay/üründetay2.jpeg">
+                        </div>
+                        <div>
+                            <img src="./detay/üründetay3.jpeg">
+                        </div>
+                        <div>
+                            <img src="./detay/üründetay4.jpeg">
+                        </div>
+                        <div>
+                            <img src="./detay/üründetay5.jpeg">
+                        </div>
+                        <div>
+                            <img src="./detay/üründetay6.jpeg">
+                        </div>
+                        <div>
+                            <img src="./detay/üründetay7.jpeg">
+                        </div>
+                        <div>
+                            <img src="./detay/üründetay8.jpeg">
+                        </div>
+                        <div>
+                            <img src="./detay/üründetay9.jpeg">
+                        </div>
+                        <div>
+                            <img src="./detay/üründetay10.jpeg">
+                        </div>
+                        <div class="scroll-bottom"></div>
+                    </div>
+                    <div class="lg-img">
+                        <img class="rounded-4" src="./detay/üründetay1.jpeg">
+                    </div>
+                </div>
+                <div class="comments d-md-flex d-none flex-column p-3 gap-2">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="fs-5">Yorumlar <span class="text-secondary">10.000</span></div>
+                        <i class="points fa-solid fa-star text-danger">4,6</i>
+                    </div>
+                    <div>
+                        <button class="btn border border-0">Hepsi</button>
+                        <button class="border border-0 rounded-4">1.000+</button>
+                        <button class="border border-0 rounded-4"><i class="fa-regular fa-message"></i>669</button>
+                        <button class="border border-0 rounded-4"><span><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>10.000+</button>
+                        <button class="border border-0 rounded-4"><span><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></span>1.500+</button>
+                        <button class="border border-0 rounded-4"><span><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>706</button>
+                        <button class="border border-0 rounded-4"><span><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></span>255</button>
+                        <button class="border border-0 rounded-4"><span><i
+                                    class="fa-solid fa-star"></i></span>512</button>
+                    </div>
+                    <div class="wrapper d-flex flex-column gap-2">
+                        <div class="input-group mb-3">
+                            <input id="inp" type="text" class="form-control" placeholder="Bir yorum yazın"
+                                aria-label="Bir yorum yazın" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Gönder</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container-fluid d-flex flex-column">
+
+                <div class="d-flex">
+                    <div class="mt-md-0 mt-2">
+                        <p class="fs-4 w-75">TWS Mini Bluetooth Kulaklık Stereo Ses Kablosuz Kulaklık IPX5 Su Geçirmez
+                            Spor Kulaklık Güç Bankası Ile LED Ekran</p>
+                        <div><i class="fa-solid fa-star text-danger">4,6</i><span class="text-secondary"> - %89 Tavsiye
+                                ediyor - 20000'dan fazla satın alma</span></div>
+                    </div>
+                    <div class="d-flex justify-content-center gap-3 fs-4 mt-md-0 mt-3">
+                        <i class="fa-regular fa-heart text-black bg-white rounded-5 like"></i>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                </div>
+
+                <div class="cizgi"></div>
+
+                <div class="d-flex flex-md-row flex-column justify-content-between">
+                    <div class="mt-3">
+                        <p class="fs-4 fw-bold">₺239 fiyatından itibaren Orijinal fiyat <span
+                                class="text-secondary text-decoration-line-through">₺598</span></p>
+                        <span class="text-secondary">Ücretsiz kargo 29 Aralık - 21 Ocak</span>
+                    </div>
+                    <div class="d-flex flex-md-column flex-row gap-2 mt-3">
+                        <button class="btn btn-dark p-2">Sepete ekle</button>
+                        <button class="btn btn-danger p-2">Şimdi satın al</button>
+                    </div>
+                </div>
+
+                <div class="cizgi py-3"></div>
+
+                <div class="item-color d-flex flex-column py-3">
+                    <p class="text-secondary fs-5">Renk</p>
+                    <div class="d-flex gap-2">
+                        <div>
+                            <img src="./detay/üründetay2.jpeg">
+                        </div>
+                        <div>
+                            <img src="./detay/üründetay3.jpeg">
+                        </div>
+                        <div>
+                            <img src="./detay/üründetay4.jpeg">
+                        </div>
+                        <div>
+                            <img src="./detay/üründetay5.jpeg">
+                        </div>
+                        <div>
+                            <img src="./detay/üründetay6.jpeg">
+                        </div>
+                        <div>
+                            <img src="./detay/üründetay7.jpeg">
+                        </div>
+                        <div>
+                            <img src="./detay/üründetay8.jpeg">
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 mt-3 p-2 rounded-3 bg-success text-white align-items-center">
+                        <i class="fa-solid fa-bolt cevir ms-2 mb-2"></i>
+                        <p>Bu ürünün fiyatı yalnızca indirim dönemi boyunca düşüktür</p>
+                    </div>
+                </div>
+
+                <div class="item-info container-fluid border border-1 rounded-3 d-flex flex-column gap-3 py-3">
+
+                    <div class="d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-truck"></i>
+                        <div class="d-flex flex-column">
+                            <p class="m-0">Ücretsiz kargo</p>
+                            <p class="text-secondary">30 Aralık - 22 Ocak</p>
+                        </div>
+                    </div>
+                    <div class="cizgi"></div>
+                    <div class="d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-shield"></i>
+                        <p class="m-0">İade koşulları</p>
+                    </div>
+                    <div class="cizgi"></div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex gap-3 align-items-center">
+                            <i class="fa-solid fa-lock"></i>
+                            <p class="m-0">Güvenli Ödemeler</p>
+                        </div>
+                        <div class="pay-icons d-flex me-5">
+                            <img class="pay-icon" src="./icons/visa_v3.png">
+                            <img class="pay-icon" src="./icons/mastercard_v3.png">
+                            <img class="pay-icon" src="./icons/maestro_v3.png">
+                        </div>
+                    </div>
+                    <div class="cizgi"></div>
+                    <div class="d-flex align-items-center gap-3">
+                        <i class="fa-regular fa-message"></i>
+                        <p class="m-0">Destek ekibimiz Türkçe konuşuyor</p>
+                    </div>
+                </div>
+
+                <div class="features d-flex flex-column gap-2 py-2">
+                    <div class="fs-5">Özellikler</div>
+                    <div class="d-flex justify-content-between align-items-center text-secondary">
+                        <div>Su Koruması</div>
+                        <div class="dotted mt-2"></div>
+                        <div class="text-black">evet</div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center text-secondary">
+                        <div>Kulaklık Tipi</div>
+                        <div class="dotted mt-2"></div>
+                        <div class="text-black">kulak içi</div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center text-secondary">
+                        <div>Bluetooth sürümü</div>
+                        <div class="dotted mt-2"></div>
+                        <div class="text-black">5.0</div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center text-secondary">
+                        <div>Su Koruması</div>
+                        <div class="dotted mt-2"></div>
+                        <div class="text-black">evet</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="commentss d-md-none d-block flex-column p-2 gap-2">
+            <div class="d-flex align-items-center gap-3">
+                <div class="fs-5">Yorumlar <span class="text-secondary">10.000</span></div>
+                <i class="points fa-solid fa-star text-danger">4,6</i>
+            </div>
+            <div>
+                <button class="btn border border-0">Hepsi</button>
+                <button class="border border-0 rounded-4">1.000+</button>
+                <button class="border border-0 rounded-4"><i class="fa-regular fa-message"></i>669</button>
+                <button class="border border-0 rounded-4"><span><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>10.000+</button>
+                <button class="border border-0 rounded-4"><span><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></span>1.500+</button>
+                <button class="border border-0 rounded-4"><span><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>706</button>
+                <button class="border border-0 rounded-4"><span><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></span>255</button>
+                <button class="border border-0 rounded-4"><span><i class="fa-solid fa-star"></i></span>512</button>
+            </div>
+            <div class="wrappers d-flex flex-column mt-2 gap-2">
+                <div class="input-group mb-3">
+                    <input id="inps" type="text" class="form-control" placeholder="Bir yorum yazın"
+                        aria-label="Bir yorum yazın" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2s">Gönder</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="cizgi py-3"></div>
+
+    <footer class="container-fluid py-lg-3 py-md-2 py-1">
+        <div class="d-flex flex-lg-row flex-md-row flex-sm-row flex-column justify-content-around">
+            <div class="d-flex">
+                <div class="lh-lg d-flex flex-column gap-2">
+                    <span>Kullanıcı</span>
+                    <ul class="list-group list-unstyled d-flex flex-column gap-2">
+                        <li class="list-item">Katalog
+                            <a href="#"></a>
+                        </li>
+                        <li class="list-item">Destek
+                            <a href="#"></a>
+                        </li>
+                        <li class="list-item">Gizlilik Politikası
+                            <a href="#"></a>
+                        </li>
+                        <li class="list-item">Kullanım Şartları
+                            <a href="#"></a>
+                        </li>
+                        <li class="list-item">Erişebilirlik Ayarları
+                            <a href="#"></a>
+                        </li>
+                        <li class="list-item">J'da popüler ürünler
+                            <a href="#"></a>
+                        </li>
+                        <li class="list-item">J'daki en popüler aramalar
+                            <a href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lh-lg">
+                    <span>Ortak</span>
+                    <ul class="list-group list-unstyled d-flex flex-column gap-2">
+                        <li class="list-item">Satıcı ol
+                            <a href="#"></a>
+                        </li>
+                        <li class="list-item">Kullanım Şartları
+                            <a href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lh-lg">
+                    <span>Şirket</span>
+                    <ul class="list-group list-unstyled d-flex flex-column gap-2">
+                        <li class="list-item">Şirket hakkında
+                            <a href="#"></a>
+                        </li>
+                        <li class="list-item">Telif hakkı koruması
+                            <a href="#"></a>
+                        </li>
+                    </ul>
+                    <ul class="list-group list-unstyled py-3 d-flex flex-column gap-2">
+                        <span>J Grup Şirketleri</span>
+                        <li class="list-item">J Logistics
+                            <a href="#"></a>
+                        </li>
+                        <li class="list-item">J
+                            <a href="#"></a>
+                        </li>
+                        <li class="list-item">Onfy
+                            <a href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lh-lg d-flex flex-column gap-3">
+                <div class="payments">
+                    <span>Visa Secure</span>
+                    <div class="payment-all d-flex gap-2 mt-4 p-lg-3 p-md-2 p-1">
+                        <img src="https://web-client.joomcdn.net/web-client/98b13ee8b2e75270df8e.svg">
+                        <p class="payment">Payment Card Security Standard</p>
+                    </div>
+                </div>
+                <div class="social d-flex flex-column gap-1 py-lg-3 py-md-2 py-1">
+                    <span>Mobile</span>
+                    <div class="mt-2">
+                        <img class="app-store" src="https://web-client.joomcdn.net/web-client/b6670405557c1583fcfe.svg">
+                    </div>
+                    <div>
+                        <img src="https://web-client.joomcdn.net/web-client/ce52f7f716e49a01948f.svg">
+                    </div>
+                    <div>
+                        <img src="https://web-client.joomcdn.net/web-client/96f9741800d3ec57687b.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="px-2">
+            <div class="cizgi"></div>
+        </div>
+        <div class="d-flex flex-md-row flex-column-reverse align-items-center justify-content-between künye-span">
+            <span class="footer-dip p-2">@Utkyfact</span>
+            <div class="d-flex footer-dip-end gap-2 p-md-3 p-1">
+                <span class="footer-dip">Bu site reCAPTCHA ve Google tarafından korunmaktadır</span>
+                <span class="footer-dip">
+                    Gizlilik Politikası
+                </span>
+                <span class="footer-dip">
+                    Kullanım Şartları
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./public/js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/15112f395e.js" crossorigin="anonymous"></script>
+    <script src="./public/js/item.js"></script>
+
+</body>
+
+</html>

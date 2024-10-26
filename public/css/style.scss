@@ -1,0 +1,465 @@
+$border:1px solid black;
+$borderl:1px solid lightgray;
+$red:#F65A5A;
+@mixin wH($w,$h){
+    width: $w;
+    height: $h;
+}
+@mixin fC($f,$c){
+    font-size: $f;
+    color: $c;
+}
+@mixin fCf($f,$c,$b){
+    font-size: $f;
+    color: $c;
+    font-weight: $b;
+}
+
+nav{
+    .üst-nav{
+        .options{
+            .dil{
+                font-size: 12px;
+                border: none;
+            }
+            .para{
+                font-size: 12px;
+                border: none;
+            }
+        }
+        .list-group-flush{
+            font-size: 12px;
+            a{
+                text-decoration: none;
+                padding: 6px;
+                color: gray;
+            } 
+            .ciz:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    .alt-nav{
+        .logo{
+            @include wH(150px,40px);
+            img{
+                @include wH(100%,100%);
+            }
+        }
+        .search{
+            @include wH(60%,48px);
+            input{
+                @include wH(100%,100%);
+                background-color: #F2F3F7;
+                outline: none !important;
+            }
+            button{
+                @include wH(62px,48px);
+                right: 0;
+                border:2px solid #F2F3F7;
+                background-color: $red;
+            }
+            .search-inp::placeholder{
+                margin-left: 10px !important;
+                padding: 10px;
+            }
+        }
+        .sag a{
+            text-decoration: none;
+            @include fCf(14px,black,500);
+            i{
+                font-size: 20px;
+            }
+        }
+        .badge{
+            font-size: 8px;
+            right: 10px;
+            
+        }
+        .navbar{
+            .bottom-item{
+                text-decoration: none;
+                color: gray;
+            }
+            .nav-item-bottom:hover{
+                a{
+                    text-decoration: underline;
+                }
+            }
+            li:hover{
+                cursor: pointer;
+                .nav-link{
+                    color: $red;  
+                }
+            }
+        }
+    } 
+}
+
+.category-open ul li{
+    cursor: pointer;
+    i{
+        font-size: 20px;
+    }
+}
+
+.category-open ul li a:hover{
+    color: $red;
+}
+
+.category-open ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    margin-left: 7px;
+}
+
+.jg-logo{
+    @include wH(20px,20px);
+    
+    img{
+        @include wH(100%,100%);
+    }
+}
+
+.search-2{
+    @include wH(100%,48px);
+    .search-inp-2{
+        @include wH(100%,100%);
+        background-color: #F2F3F7;
+        outline: none !important;
+    }
+    .search-inp-2::placeholder{
+        margin-left: 10px !important;
+        padding: 10px;
+    }
+}
+
+main{
+    .category{
+        font-size: 14px;
+            div:hover{
+                color: $red;
+                cursor: pointer;
+            }
+    }
+    .promosyon:hover{
+        cursor: pointer;
+        .promosyon-arrow{
+            color: white;
+        }
+    }
+}
+
+.tekno-bg{
+    background-color: #EAEDF8;
+    cursor: pointer;
+}
+
+.tekno-bg:hover{
+    img{
+        transform: scale(105%);
+        transition: .5s;
+    }
+}
+
+.outlet-bg{
+    background-color: #f9d3d9;
+    cursor: pointer;
+}
+
+.outlet-bg:hover{
+    img{
+        transform: scale(105%);
+        transition: .5s;
+    }
+}
+
+.promosyon-title{
+    font-size: 20px;
+}
+
+.promosyon-info{
+    font-size: 14px;
+}
+
+.content{
+    .cards{
+        overflow: hidden;
+        .card{
+            border: none;
+            cursor: pointer;
+        }
+        .like{
+            z-index: 1;
+            }
+        img{
+            @include wH(100%,100%);
+            border-radius: 10px;
+            }
+        span{
+            @include fC(12px,white);
+            background-color: $red;
+            border-radius: 10px;
+        }
+        .cevir{
+            @include fC(14px,$red);
+            transform: rotate(-35deg);
+        }
+        i{
+            color: $red;
+        }
+        p{  white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 14px;
+        }
+        .card-alt{
+            font-size: 10px;
+        }
+        .bg-ver{
+            background-color: #F2F3F7;
+            border-radius: 5px;
+        }
+    }
+    .card img:hover{
+        transform: scale(105%);
+        transition: .5s;
+    }
+}
+
+.content-2{
+    .carts{
+        .cart{
+            @include wH(500px,255px);
+            box-sizing: border-box;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            .carousel-info{
+                font-size: 14px
+            }
+            img{
+                @include wH(100%,100%);
+                border-radius: 10px;
+            }
+        }
+        i{
+            border-radius: 50%;
+        }
+        .cart:hover{
+            img{
+                transform: scale(105%);
+                transition: .5s;
+            }
+        }
+    }
+    .carousel-title{
+        font-size: 20px;
+    }
+}
+
+.content{
+    .sol{
+        width: 50%;
+        cursor: pointer;
+        img{
+            @include wH(100%,100%);
+        }
+    }
+    .sol:hover{
+        img{
+            transform: scale(105%);
+            transition: .5s;
+        }
+    }
+    .sag{
+        width: 50%;
+        .card{
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.cizgi{
+    border-bottom:$borderl;
+}
+
+footer{
+    span{
+        font-weight: 500;
+    }
+    .list-item{
+        cursor: pointer;
+        @include fC(14px,gray);
+    }
+    .list-item:hover{
+        text-decoration: underline;
+    }
+    .payment-all{
+        border: $borderl;
+        border-radius: 10px;
+    }
+    .payment{
+        @include fC(12px,black);
+    }
+    .app-store{
+        width: 150px;
+    }
+    .lh-lg{
+        margin: 0px 5px;
+    }
+}
+
+.footer-dip{
+    color: lightgray;
+    font-size: 14px;
+}
+
+.footer-dip-end{
+    div,span{
+        @include fC(12px,gray);
+    }
+    div{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+@media (max-width:1030px) {
+    .card-üst{
+        font-size: 10px;
+        i{
+            font-size: 10px;
+        }
+    }
+    .card-alt{
+        font-size: 11px !important;
+        i{
+            font-size: 11px;
+        }
+    }
+}
+
+@media (max-width:930px) {
+    .oto-moto{
+        display: none;
+    }
+    .card-üst{
+        font-size: 10px;
+        i{
+            font-size: 10px;
+        }
+    }
+    .card-alt{
+        font-size: 10px !important;
+        i{
+            font-size: 10px;
+        }
+    }
+}
+
+
+@media (max-width:866px) {
+    .shoes{
+        display: none;
+    }
+}
+
+@media (max-width:794px) {
+    .men{
+        display: none;
+    }
+}
+
+@media (max-width:768px) {
+    .promosyon-text{
+        font-size: 12px;
+    }
+    .geceden{
+        font-size: 12px;
+    }
+    nav .alt-nav{
+        .sag a{
+            i{
+                font-size: 14px;
+            }
+        }
+    }
+    .promosyon-title{
+        font-size: 14px;
+    }
+    .promosyon-info{
+        font-size: 10px;
+    }
+
+    .content{
+        .sag{
+            width: 40%;
+        }
+    }
+    .sol{
+        width: 60%;
+    }
+    .sol .çanta{
+        width: 100%;
+        img{
+            @include wH(150px,150px);
+        }
+    }
+    footer{
+        font-size: 12px;
+    }
+    .payment-all{
+        padding: 0px;
+    }
+    .social{
+        width: 120px;
+    }
+    .app-store{
+        width: 120px;
+    }
+}
+
+@media (max-width:576px) {
+    .content{
+        justify-content: space-between;
+        .sol{
+            width: 100%;
+        }
+       .sag{
+            width: 100% !important;
+       }   
+    }
+    .promosyon-title{
+        font-size: 12px;
+    }
+    .promosyon-info{
+        font-size: 10px;
+    }
+    .carousel-title{
+        font-size: 14px !important;
+    .carousel-info{
+        font-size: 12px !important;
+    }
+    .basket-btn{
+        font-size: 14px !important;
+    }
+    }
+    footer{
+        .list-item{
+            font-size: 12px;
+        }
+    }
+    .payment{
+        font-size:12px;
+    }
+}
+
+@media (max-width:360px){
+    .alt-nav{
+        flex-direction: column;
+    }
+}
