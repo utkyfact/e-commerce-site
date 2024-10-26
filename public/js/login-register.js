@@ -1,11 +1,11 @@
-const userLog = document.getElementById("username-log")
-const passLog = document.getElementById("pass-log")
-const mailLog = document.getElementById("mail-log")
+const kullaniciLog = document.getElementById("username-log")
+const sifreLog = document.getElementById("pass-log")
+const meyilLog = document.getElementById("mail-log")
 const btnLog = document.getElementById("btn-log")
 
-const userReg = document.getElementById("username-reg")
-const passReg = document.getElementById("pass-reg")
-const mailReg = document.getElementById("mail-reg")
+const kullaniciReg = document.getElementById("username-reg")
+const sifreReg = document.getElementById("pass-reg")
+const meyilReg = document.getElementById("mail-reg")
 const btnReg = document.getElementById("btn-reg")
 
 const wrapModal = document.querySelector(".wrapper-modal")
@@ -24,14 +24,14 @@ btnChange.addEventListener("click",()=>{
 
 // REGİSTER FONKSİYON
 btnReg.addEventListener("click",register)
-function register(){
+function kayit(){
     wrapModal.innerHTML = ""
     let kayitol = JSON.parse(localStorage.getItem("kayit"))
-    if(userReg.value.trim() != "" && passReg.value.trim() != "" && mailReg.value.trim() != ""){
+    if(userReg.value.trim() != "" && sifreReg.value.trim() != "" && meyilReg.value.trim() != ""){
         let kullanici = {
-            user:userReg.value,
-            pass:passReg.value,
-            mail:mailReg.value
+            ad:kullaniciReg.value,
+            sifre:sifreReg.value,
+            meyil:meyilReg.value
         }
         kayitol.push(kullanici)
         localStorage.setItem("kayit",JSON.stringify(kayitol))
@@ -40,17 +40,17 @@ function register(){
         p.classList.add("text-success","p-2")
         wrapModal.append(p)
     }  
-    userReg.value = ""
-    passReg.value = ""
-    mailReg.value = ""
+    kullaniciReg.value = ""
+    sifreReg.value = ""
+    meyilReg.value = ""
 }
 
 // LOGİN FONKSİYON
 btnLog.addEventListener("click",login)
-function login(){
+function giris(){
     wrapModal.innerHTML = ""
     let kayitol = JSON.parse(localStorage.getItem("kayit"))
-    let eslesme = kayitol.filter(uye => uye.user == userLog.value && uye.pass == passLog.value && uye.mail == mailLog.value)
+    let eslesme = kayitol.filter(uye => uye.kullanici == kullaniciLog.value && uye.sifre == sifreLog.value && uye.meyil == meyilLog.value)
     if(eslesme.length != 0){
         const p = document.createElement("p")
         p.textContent = "Başarı ile giriş yaptın."
