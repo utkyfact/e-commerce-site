@@ -1,65 +1,149 @@
-const kullaniciLog = document.getElementById("username-log")
-const sifreLog = document.getElementById("pass-log")
-const meyilLog = document.getElementById("mail-log")
-const btnLog = document.getElementById("btn-log")
+// DOM Elements
+const authElements = {
+    signIn: {
+        form: document.querySelector('.form-login'),
+        username: document.getElementById('username-log'),
+        password: document.getElementById('pass-log'),
+        email: document.getElementById('mail-log'),
+        submitButton: document.getElementById('btn-log')
+    },
+    signUp: {
+        form: document.querySelector('.form-register'),
+        username: document.getElementById('username-reg'),
+        password: document.getElementById('pass-reg'),
+        email: document.getElementById('mail-reg'),
+        submitButton: document.getElementById('btn-reg')
+    },
+    modal: {
+        wrapper: document.querySelector('.wrapper-modal'),
+        title: document.getElementById('staticBackdropLabel'),
+        toggleButton: document.querySelector('.btn-change')
+    }
+};
 
-const kullaniciReg = document.getElementById("username-reg")
-const sifreReg = document.getElementById("pass-reg")
-const meyilReg = document.getElementById("mail-reg")
-const btnReg = document.getElementById("btn-reg")
+// Constants
+const STORAGE_KEY = 'userAccounts';
+const MESSAGES = {
+    success: {
+        signUp: 'Account created successfully',
+        signIn: 'Signed in successfully'
+    },
+    error: {
+        signIn: 'Please create an account first',
+        emptyFields: 'Please fill in all fields'
+    }
+};
 
-const wrapModal = document.querySelector(".wrapper-modal")
+// Utilities
+class FormUtils {
+    static clearFields(formType) {
+        const form = authElements[formType];
+        form.username.value = '';
+        form.password.value = '';
+        form.email.value = '';
+    }
 
-const formLog = document.querySelector(".form-login")
-const formReg = document.querySelector(".form-register")
-const title = document.getElementById("staticBackdropLabel")
-const btnChange = document.querySelector(".btn-change")
+    static validateFields(formType) {
+        const form = authElements[formType];
+        return form.username.value.trim() !== '' &&
+            form.password.value.trim() !== '' &&
+            form.email.value.trim() !== '';
+    }
 
-// GİRİŞ KAYIT ARASI İNNER HTML DEĞİŞTİRMEK İÇİN BİR FONKSİYON
-btnChange.addEventListener("click",()=>{
-    formLog.classList.toggle("d-none")
-    formReg.classList.toggle("d-none") 
-    wrapModal.innerHTML = ""
-})
-
-// REGİSTER FONKSİYON
-btnReg.addEventListener("click",register)
-function kayit(){
-    wrapModal.innerHTML = ""
-    let kayitol = JSON.parse(localStorage.getItem("kayit"))
-    if(userReg.value.trim() != "" && sifreReg.value.trim() != "" && meyilReg.value.trim() != ""){
-        let kullanici = {
-            ad:kullaniciReg.value,
-            sifre:sifreReg.value,
-            meyil:meyilReg.value
-        }
-        kayitol.push(kullanici)
-        localStorage.setItem("kayit",JSON.stringify(kayitol))
-        const p = document.createElement("p")
-        p.textContent = "Başarı ile kayıt oldunuz."
-        p.classList.add("text-success","p-2")
-        wrapModal.append(p)
-    }  
-    kullaniciReg.value = ""
-    sifreReg.value = ""
-    meyilReg.value = ""
-}
-
-// LOGİN FONKSİYON
-btnLog.addEventListener("click",login)
-function giris(){
-    wrapModal.innerHTML = ""
-    let kayitol = JSON.parse(localStorage.getItem("kayit"))
-    let eslesme = kayitol.filter(uye => uye.kullanici == kullaniciLog.value && uye.sifre == sifreLog.value && uye.meyil == meyilLog.value)
-    if(eslesme.length != 0){
-        const p = document.createElement("p")
-        p.textContent = "Başarı ile giriş yaptın."
-        p.classList.add("text-success","p-2")
-        wrapModal.append(p)
-    }else{
-        const p = document.createElement("p")
-        p.textContent = "Kayıt olmadan giriş yapılamaz."
-        p.classList.add("text-danger","p-2")
-        wrapModal.append(p)
+    static toggleForms() {
+        authElements.signIn.form.classList.toggle('d-none');
+        authElements.signUp.form.classList.toggle('d-none');
+        authElements.modal.wrapper.innerHTML = '';
     }
 }
+
+// Message Display
+class MessageDisplay {
+    static showMessage(message, isSuccess = true) {
+        const messageElement = document.createElement('p');
+        messageElement.textContent = message;
+        messageElement.classList.add(
+            isSuccess ? 'text-success' : 'text-danger',
+            'p-2'
+        );
+        authElements.modal.wrapper.innerHTML = '';
+        authElements.modal.wrapper.appendChild(messageElement);
+    }
+}
+
+// Auth Manager
+class AuthManager {
+    static initialize() {
+        const accounts = localStorage.getItem(STORAGE_KEY);
+        if (!accounts) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify([]));
+        }
+    }
+
+    static getAccounts() {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    }
+
+    static createAccount(userData) {
+        const accounts = this.getAccounts();
+        accounts.push(userData);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(accounts));
+    }
+
+    static verifyAccount(credentials) {
+        const accounts = this.getAccounts();
+        return accounts.some(account =>
+            account.username === credentials.username &&
+            account.password === credentials.password &&
+            account.email === credentials.email
+        );
+    }
+}
+
+// Event Handlers
+class AuthEventHandler {
+    static handleSignUp(event) {
+        event?.preventDefault();
+
+        if (!FormUtils.validateFields('signUp')) {
+            MessageDisplay.showMessage(MESSAGES.error.emptyFields, false);
+            return;
+        }
+
+        const userData = {
+            username: authElements.signUp.username.value,
+            password: authElements.signUp.password.value,
+            email: authElements.signUp.email.value
+        };
+
+        AuthManager.createAccount(userData);
+        MessageDisplay.showMessage(MESSAGES.success.signUp);
+        FormUtils.clearFields('signUp');
+    }
+
+    static handleSignIn(event) {
+        event?.preventDefault();
+
+        const credentials = {
+            username: authElements.signIn.username.value,
+            password: authElements.signIn.password.value,
+            email: authElements.signIn.email.value
+        };
+
+        if (AuthManager.verifyAccount(credentials)) {
+            MessageDisplay.showMessage(MESSAGES.success.signIn);
+        } else {
+            MessageDisplay.showMessage(MESSAGES.error.signIn, false);
+        }
+    }
+}
+
+// Initialize
+(function initialize() {
+    AuthManager.initialize();
+
+    // Event Listeners
+    authElements.modal.toggleButton.addEventListener('click', FormUtils.toggleForms);
+    authElements.signUp.submitButton.addEventListener('click', AuthEventHandler.handleSignUp);
+    authElements.signIn.submitButton.addEventListener('click', AuthEventHandler.handleSignIn);
+})();

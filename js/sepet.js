@@ -1,6 +1,4 @@
 const basket = document.querySelector(".basket");
-const btnCat = document.getElementById("btn-category");
-const catOpen = document.querySelector(".category-open");
 const arkaPlan = document.querySelector(".arka-plan");
 const badge = document.querySelector(".badge");
 
@@ -288,9 +286,3 @@ function totalCost(){
     localStorage.setItem("sepet",JSON.stringify(items))
 }
 totalCost()
-
-// AÇILIR KAPANIR KATALOG
-btnCat.addEventListener("click",()=>{
-    catOpen.classList.toggle("d-none")
-})
-
