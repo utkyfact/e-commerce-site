@@ -129,6 +129,8 @@ function ekranaYazdir(){
             // Toplam tutarı güncelle
             totalCost();
         }
+        totalCost();
+        backgroundUpdate()
     }
 
     // Checkbox'ları ayarla
